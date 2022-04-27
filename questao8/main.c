@@ -7,7 +7,7 @@ int main()
     int soma = 0, i;
 
     for (i=0; i<10; i++){
-        printf("digite o numero %d", i+1);
+        printf("digite o numero %d \n", i+1);
         scanf("%d", &num[i]);
         soma = soma + num[i];
     }
