@@ -9,11 +9,11 @@ int main()
     scanf("%d", &num);
 
     if (num<0) {
-    printf("valor invalido");
-    return 0;
+        printf("valor invalido");
+        return 0;
     }
 
-    for (i=0; i<=num; i++) {
+    for (i=num; i>=0; i--) {
         printf("%d \n", i);
     }
     return 0;
