@@ -1,2 +1,2 @@
 # jubilante-guacamole
-Reportorio para postar as listas de C
+Repertorio com resolução de listas de C
