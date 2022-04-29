@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1651256958 source:c:\users\fhugo\onedrive\Área de trabalho\documentos\code block projects\jubilante-guacamole\questao29\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
