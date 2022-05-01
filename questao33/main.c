@@ -11,8 +11,6 @@ int main()
         anos ++;
     }
 
-    printf("%d \n", hchico);
-    printf("%d \n", hze);
     printf("%d \n", anos);
     return 0;
 }
