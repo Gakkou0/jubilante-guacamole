@@ -11,6 +11,7 @@ int main()
 
         i++;
 
+        printf("numero de idades informadas %d \n", i);
         soma += num;
         printf("A Media eh: %d \n", soma/i);
     }
