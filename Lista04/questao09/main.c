@@ -18,6 +18,5 @@ int main()
     for  (i = 5; i>=0; i--){
         printf("%d \n", num[i]);
     }
-
     return 0;
 }
