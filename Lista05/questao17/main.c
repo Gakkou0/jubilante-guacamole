@@ -7,7 +7,7 @@ int main()
     int rand(void);
     int tabuleiro[3][3] = { {0, 0, 0},
                             {0, 0, 0},
-                            {0, 0, 0} }, i, j, x, y, p ,o, endGame = 0, jogadaPc, jogadaUser;
+                            {0, 0, 0} }, i, j, linhaUser, colunaUser, linhaPc, ColunaPc, endGame = 0, jogadaPc, jogadaUser;
     srand( (unsigned)time(NULL) );
 
     do {
@@ -21,27 +21,28 @@ int main()
         }
         while (jogadaUser == 0){
             printf("Qual sua proxima jogada? \n");
-            scanf("%d  %d", &x, &y);
+            scanf("%d  %d", &linhaUser, &colunaUser);
 
-            if (tabuleiro[x-1][y-1] != 0){
+            if (tabuleiro[linhaUser-1][colunaUser-1] != 0){
                 printf("Posicao ja selecionada \n");
             } else {
-                tabuleiro[x-1][y-1] = 1;
+                tabuleiro[linhaUser-1][colunaUser-1] = 1;
                 jogadaUser = 1;
             }
-                if (tabuleiro[0][0] != 0 && tabuleiro[0][1] != 0 && tabuleiro[0][2] != 0 && 
+                
+        }
+        if (tabuleiro[0][0] != 0 && tabuleiro[0][1] != 0 && tabuleiro[0][2] != 0 && 
             tabuleiro[1][0] != 0 && tabuleiro[1][1] != 0 && tabuleiro[1][2] != 0 && 
             tabuleiro[2][0] != 0 && tabuleiro[2][1] != 0 && tabuleiro[2][2] != 0){
                 printf("Empate \n");
                 break;
-            } 
-        }
+            }
         while (jogadaPc == 0){
-        o = rand() % 3;
-        p = rand() % 3;
+        linhaPc = rand() % 3;
+        ColunaPc = rand() % 3;
 
-        if (tabuleiro[o][p]==0){
-            tabuleiro[o][p] = -1;
+        if (tabuleiro[linhaPc][ColunaPc]==0){
+            tabuleiro[linhaPc][ColunaPc] = -1;
             jogadaPc = 1;
         } 
         }
