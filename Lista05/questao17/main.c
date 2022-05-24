@@ -6,8 +6,8 @@ int main()
 {
 
     int board[3][3] = { {0, 0, 0},
-                            {0, 0, 0},
-                            {0, 0, 0} }, i, j, lineUser, colunUser, linePC, colunPc, endGame = 0, turnPc, turnUser;
+                        {0, 0, 0},
+                        {0, 0, 0} }, i, j, lineUser, colunUser, linePC, colunPc, endGame = 0, turnPc, turnUser;
     srand( (unsigned)time(NULL) );
 
     do {
