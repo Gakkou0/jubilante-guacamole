@@ -9,7 +9,7 @@ elementos que aparecem somente em B.*/
 
 int main()
 {
-    int tamanhoA, tamanhoB, tamanhoC, elemIguais = 0, i, j, *A, *B, *C;
+    int tamanhoA, tamanhoB, tamanhoC, elemIguais = 0, i, j, *A, *B, *C, temElemIgual = 0, x = 0;
     srand(time(NULL));
     
     scanf("%d %d", &tamanhoA, &tamanhoB);
@@ -28,22 +28,63 @@ int main()
         }
     }
 
-    tamanhoC = (tamanhoA + tamanhoB)- elemIguais;
+    tamanhoC = (tamanhoA + tamanhoB)- (2 * elemIguais);
 
     C = (int *)(malloc(tamanhoC * sizeof(int)));
 
     for (i=0; i<tamanhoA; i++){
+        temElemIgual = 0;
+        for(j=0; j<tamanhoB; j++){
+            if (A[i]==B[j]){
+                temElemIgual = 1;
+
+            }
+            if (j==tamanhoB-1){
+                if(temElemIgual == 0){
+                    C[x] = A[i];
+                    x++;
+                }
+            }
+        }
+    }
+
+     for (i=0; i<tamanhoB; i++){
+        temElemIgual = 0;
+        for(j=0; j<tamanhoA; j++){
+            if (B[i]==A[j]){
+                temElemIgual = 1;
+            }
+            if (j==tamanhoB-1){
+                if(temElemIgual == 0){
+                    C[x] = B[i];
+                    x++;
+                }
+            }
+        }
+    }
+
+    printf("Vetor A: \n");
+    for (i=0; i<tamanhoA; i++){
         printf("%d ", A[i]);
     }
-    printf("\n");
-    for (i=0; i<tamanhoA; i++){
+    printf("\n \n");
+    printf("Vetor B: \n");
+    for (i=0; i<tamanhoB; i++){
         printf("%d ", B[i]);
     }
+    printf("\n \n");
+    /*
     printf("\n");
     printf("%d \n", tamanhoA);
     printf("%d \n", tamanhoB);
     printf("%d \n", tamanhoC);
     printf("%d \n", elemIguais);
+    */
+
+    printf("Vetor C: \n");
+    for (i=0; i<tamanhoC; i++){
+        printf("%d ", C[i]);
+    }
 
     return 0;
 }
