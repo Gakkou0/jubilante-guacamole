@@ -66,10 +66,8 @@ int main()
         }
     }        
         for (i=0; i<3; i++){
-            /*printf("Palpite do %s:", jogadores[i].nome);
-            scanf("%d %d", &palpiteLinha[i], &palpiteColuna[i]);*/
-            palpiteLinha[i] = rand() % 5;
-            palpiteColuna[i] = rand() % 5;
+            printf("Palpite do %s:", jogadores[i].nome);
+            scanf("%d %d", &palpiteLinha[i], &palpiteColuna[i]);
 
             if (tabuleiro[palpiteLinha[i]][palpiteColuna[i]]==0){
                 if (pontuacao[i] != 0){
