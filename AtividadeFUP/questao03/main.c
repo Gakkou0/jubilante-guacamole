@@ -8,10 +8,13 @@ uma struct com os dados dos jogadores e uma matriz para o tabuleiro.*/
 
 #include <stdio.h>
 #include <stdlib.h>
+struct jogador {
+    char nome[10];
+    int idade;
+    int numVitorias;
+}
 
 int main (){
 
-
-    
     return 0;
 }
