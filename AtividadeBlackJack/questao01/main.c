@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 struct carta {
-    char naipe[10]a;
+    char naipe[10];
     int numero; 
 }baralho[52];
 
